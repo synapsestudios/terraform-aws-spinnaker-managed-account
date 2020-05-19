@@ -1,0 +1,1 @@
+# terraform-aws-spinnaker-managed-account
