@@ -1,13 +1,13 @@
 # AWS Spinnaker Managed Account
 
-This module creates the necessary IAM roles and policies to allow a clients account to be managed by a Spinnaker Managing Account (SynapseStudios).
+This module creates the necessary IAM roles and policies to allow a client accounts to be managed by a Spinnaker Managing Account (SynapseStudios).
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.6 |
+| terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
 | template | ~> 2.1 |
 
