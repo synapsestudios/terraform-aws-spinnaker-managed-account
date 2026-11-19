@@ -29,6 +29,6 @@ This module creates the necessary IAM roles and policies to allow a client accou
 
 | Name | Description |
 |------|-------------|
-| spinnaker-managed-arn | n/a |
+| spinnaker-managed-arn | ARN of the SpinnakerManaged IAM role that the managing account assumes. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
