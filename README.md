@@ -9,14 +9,12 @@ This module creates the necessary IAM roles and policies to allow a client accou
 |------|---------|
 | terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
-| template | ~> 2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws | ~> 2.53 |
-| template | ~> 2.1 |
 
 ## Inputs
 
