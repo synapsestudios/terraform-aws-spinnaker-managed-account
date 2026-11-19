@@ -2,31 +2,11 @@
 # Role - SpinnakerManaged
 #########################
 resource "aws_iam_role" "spinnaker-managed" {
-  name               = "SpinnakerManaged"
-  path               = "/spinnaker/"
-  assume_role_policy = data.template_file.spinnaker-managed-policy.rendered
-}
-
-############################################
-# Template - Policy Spinnaker Managed Policy
-############################################
-data "template_file" "spinnaker-managed-policy" {
-  template = file("${path.module}/policies/SpinnakerRoleManaged.json")
-  vars = {
+  name = "SpinnakerManaged"
+  path = "/spinnaker/"
+  assume_role_policy = templatefile("${path.module}/policies/SpinnakerRoleManaged.json", {
     spinnaker-auth-role-arn = var.spinnaker-auth-role-arn
-  }
-}
-
-#################################################
-# Template - Policy Spinnaker User Managed Policy
-#################################################
-data "template_file" "spinnaker-user-managed-policy" {
-  count = var.spinnaker-user-arn == null ? 0 : 1
-
-  template = file("${path.module}/policies/SpinnakerUserManaged.json")
-  vars = {
-    spinnaker-auth-role-arn = var.spinnaker-user-arn
-  }
+  })
 }
 
 ####################
